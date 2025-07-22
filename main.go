@@ -1,16 +1,16 @@
-package webcrawler
+package main
 
 import (
 	"sync"
 )
 
 // CrawlerMain creates all the channels and triggers BO to start crawling.
-func CrawlerMain() {
+func main() {
 	sitesChannel := make(chan string)
 	crawledLinksChannel := make(chan string)
 	pendingCountChannel := make(chan int)
 
-	siteToCrawl := "https://theuselessweb.com/"
+	siteToCrawl := "https://dexarticles.com/"
 
 	go func() {
 		crawledLinksChannel <- siteToCrawl

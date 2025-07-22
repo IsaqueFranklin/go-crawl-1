@@ -1,4 +1,4 @@
-package webcrawler
+package main
 
 // MonitorCrawling looks for pending number of sites to crawl and closes sitesQueue when there are no pending sites
 func MonitorCrawling(sitesChannel chan string, crawledLinksChannel chan string, pendingCountChannel chan int) {
